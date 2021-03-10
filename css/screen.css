@@ -1,6 +1,7 @@
 /* fonts
     ---
     @font-face declarations
+    info BEM = block element modifier
 */
 /* Het is belangrijk dat we @font-face doen, niet iedereen heeft alle fonts op de pc staan!!! naam moet anders in font face ook */
 
@@ -89,7 +90,7 @@ h1 {
 h2 {
   font-size: 23px;
   line-height: 32px;
-  margin: 48px 0 24px;
+  margin: 0 0 24px;
 }
 
 /* opeenvolgende broer/zus (zelfde niveau) dan margin top van ....px */
@@ -171,6 +172,42 @@ a:active {
 a:hover,
 a:focus {
   color: #1abaff;
+}
+
+/* 
+    Component: Author
+*/
+
+/* simpel naast elkaar zetten door flexbox | op de parent plaatsen hier
+gap = automatisch witruimte tussen flex elements.*/
+.c-author {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  gap: 16px;
+}
+
+.c-author__image {
+  width: 56px;
+  height: 56px;
+  border-radius: 100%;
+  /*procent bij border-radius omdat het dan altijd 100% is, ookal wordt het groter*/
+}
+
+.c-author__name,
+.c-author__meta {
+  margin-bottom: 0;
+}
+
+.c-author__name {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.c-author__meta {
+  font-family: 'Inter Web', sans-serif;
+  font-size: 14px;
+  line-height: 24px;
 }
 
 /* Small devices (landscape phones, 576px and up) */
